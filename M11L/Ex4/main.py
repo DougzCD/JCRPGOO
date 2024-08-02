@@ -39,6 +39,7 @@ def main():
                 tax = float(input("Imposto (%): "))
                 empregado = Employee(nome, endereco, cpf, rg, telefone, sector_code, base_salary, tax)
                 print(f"Empregado {empregado.get_nome()} adicionado com sucesso.")
+                print(f"Salário calculado: {empregado.calculate_salary()}")
             except ValueError:
                 print("Erro: Valor de salário ou imposto inválido.")
             except Exception as e:
@@ -57,6 +58,7 @@ def main():
                 subsistence_allowance = float(input("Ajuda de Custo: "))
                 administrador = Administrator(nome, endereco, cpf, rg, telefone, sector_code, base_salary, tax, subsistence_allowance)
                 print(f"Administrador {administrador.get_nome()} adicionado com sucesso.")
+                print(f"Salário calculado: {administrador.calculate_salary()}")
             except ValueError:
                 print("Erro: Valor de salário, imposto ou ajuda de custo inválido.")
             except Exception as e:

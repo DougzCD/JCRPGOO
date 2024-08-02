@@ -1,5 +1,5 @@
 class Person:
-    def __init__(self, nome="", endereco="", cpf="", rg="", telefone=""):
+    def __init__(self, nome, endereco, cpf, rg, telefone):
         self.__nome = nome
         self.__endereco = endereco
         self.__cpf = cpf
@@ -37,7 +37,3 @@ class Person:
 
     def set_telefone(self, telefone):
         self.__telefone = telefone
-
-    def __str__(self):
-        return (f"Nome: {self.__nome}, Endereço: {self.__endereco}, CPF: {self.__cpf}, "
-                f"RG: {self.__rg}, Telefone: {self.__telefone}")
